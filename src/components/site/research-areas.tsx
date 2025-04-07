@@ -82,8 +82,8 @@ export function ResearchAreas() {
   return (
     <section id="research" className="py-10">
       <div className="container">
-        <div className="mb-10">
-          <p className="mt-4 text-muted-foreground max-w-3xl">
+        <div className="mb-10 text-center">
+          <p className="mt-4 text-muted-foreground max-w-3xl mx-auto">
             Our laboratory explores innovative solutions for high-speed wireline communication systems, focusing on these key research directions.
           </p>
         </div>

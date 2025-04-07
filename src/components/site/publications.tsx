@@ -12,16 +12,16 @@ import { useState } from "react";
 import Link from "next/link";
 
 export function Publications() {
-  const [openYear, setOpenYear] = useState<string | null>(null);
+  const [openYears, setOpenYears] = useState<string[]>([]);
 
   const journalYears = [...new Set(journalPapers.map(paper => paper.year))].sort((a, b) => b.localeCompare(a));
   const conferenceYears = [...new Set(conferencePapers.map(paper => paper.year))].sort((a, b) => b.localeCompare(a));
 
   const toggleYear = (year: string) => {
-    if (openYear === year) {
-      setOpenYear(null);
+    if (openYears.includes(year)) {
+      setOpenYears(openYears.filter(y => y !== year));
     } else {
-      setOpenYear(year);
+      setOpenYears([...openYears, year]);
     }
   };
 
@@ -63,8 +63,7 @@ export function Publications() {
     <section id="publications" className="py-20">
       <div className="container">
         <div className="mb-8 text-center">
-          <h2 className="text-3xl font-bold tracking-tight">Publications</h2>
-          <p className="mt-4 text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-muted-foreground max-w-3xl mx-auto">
             Our research results are published in leading journals and conferences in the field of circuits and systems.
           </p>
         </div>
@@ -171,12 +170,12 @@ export function Publications() {
                         onClick={() => toggleYear(year)}
                       >
                         <ChevronDownIcon
-                          className={`h-5 w-5 transition-transform ${openYear === year ? 'rotate-180' : ''}`}
+                          className={`h-5 w-5 transition-transform ${openYears.includes(year) ? 'rotate-180' : ''}`}
                         />
                         <h2 className="text-lg font-semibold">{year}</h2>
                       </div>
 
-                      {openYear === year && (
+                      {openYears.includes(year) && (
                         <div className="space-y-4 pl-4">
                           {journalsByYear[year].map((paper) => (
                             <div key={paper.id} className="space-y-2 group">
@@ -228,12 +227,12 @@ export function Publications() {
                         onClick={() => toggleYear(year)}
                       >
                         <ChevronDownIcon
-                          className={`h-5 w-5 transition-transform ${openYear === year ? 'rotate-180' : ''}`}
+                          className={`h-5 w-5 transition-transform ${openYears.includes(year) ? 'rotate-180' : ''}`}
                         />
                         <h2 className="text-lg font-semibold">{year}</h2>
                       </div>
 
-                      {openYear === year && (
+                      {openYears.includes(year) && (
                         <div className="space-y-4 pl-4">
                           {conferencesByYear[year].map((paper) => (
                             <div key={paper.id} className="space-y-2 group">
