@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image"; // Image 임포트 추가
+import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 import { useEffect, useState } from "react";
 
@@ -40,17 +40,17 @@ export function Footer() {
               <Link href="/" className="text-sm text-muted-foreground hover:text-primary">
                 Home
               </Link>
-              <Link href="#research" className="text-sm text-muted-foreground hover:text-primary">
-                Research Areas
+              <Link href="/professor" className="text-sm text-muted-foreground hover:text-primary">
+                Professor
               </Link>
-              <Link href="#publications" className="text-sm text-muted-foreground hover:text-primary">
+              <Link href="/team" className="text-sm text-muted-foreground hover:text-primary">
+                Members
+              </Link>
+              <Link href="/research" className="text-sm text-muted-foreground hover:text-primary">
+                Research
+              </Link>
+              <Link href="/publications" className="text-sm text-muted-foreground hover:text-primary">
                 Publications
-              </Link>
-              <Link href="#team" className="text-sm text-muted-foreground hover:text-primary">
-                Meet Our Team
-              </Link>
-              <Link href="#contact" className="text-sm text-muted-foreground hover:text-primary">
-                Contact Us
               </Link>
             </nav>
           </div>

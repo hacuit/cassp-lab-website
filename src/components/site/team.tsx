@@ -249,7 +249,7 @@ export function Team() {
     <section id="team" className="py-20 bg-muted/20">
       <div className="container">
         <div className="mb-10 text-center">
-          <h2 className="text-3xl font-bold tracking-tight">Our Team</h2>
+          <h2 className="text-3xl font-bold tracking-tight">Members</h2>
           <p className="mt-4 text-muted-foreground max-w-3xl mx-auto">
             Meet the dedicated researchers and students working at the forefront of wireline transceiver technology.
           </p>
