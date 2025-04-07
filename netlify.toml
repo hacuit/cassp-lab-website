@@ -3,7 +3,7 @@
 
 [build]
   command = "bun run build"
-  publish = ".next"
+  publish = "out"  # Updated to 'out' for static export
 
 [build.environment]
   NETLIFY_NEXT_PLUGIN_SKIP = "true"

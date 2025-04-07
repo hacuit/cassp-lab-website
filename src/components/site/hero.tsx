@@ -49,7 +49,7 @@ export function Hero() {
             <div className="relative h-80 w-80 md:h-[400px] md:w-[400px] overflow-hidden rounded-xl">
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-blue-400/20 z-10 rounded-xl" />
               <Image
-                src="/images/oscilloscope.jpg"
+                src="/images/oscilloscope.png"
                 alt="Laboratory equipment with eye diagram measurement"
                 fill
                 className="object-cover rounded-xl"

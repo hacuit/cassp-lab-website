@@ -9,7 +9,7 @@ import { MenuIcon } from "lucide-react";
 const navItems = [
   { label: "Home", href: "/" },
   { label: "Professor", href: "/professor" },
-  { label: "Team", href: "/team" },
+  { label: "Members", href: "/team" },
   { label: "Research", href: "/research" },
   { label: "Publications", href: "/publications" },
   { label: "Gallery", href: "/gallery" },
@@ -20,11 +20,13 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <div className="flex items-center gap-2">
-          <div className="relative h-8 w-8">
-            <div className="absolute inset-0 rounded-md bg-gradient-to-tr from-blue-600 to-blue-400" />
-            <div className="absolute inset-0 flex items-center justify-center text-xs font-bold text-white">
-              CASSP
-            </div>
+          <div className="relative h-10 w-10">
+            <Image
+              src="/images/new-cassp-logo.png"
+              alt="CASSP LAB Logo"
+              fill
+              className="object-contain"
+            />
           </div>
           <Link href="/" className="text-xl font-bold">
             CASSP LAB
