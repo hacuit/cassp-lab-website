@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image"; // Image 임포트 추가
 import { Separator } from "@/components/ui/separator";
 import { useEffect, useState } from "react";
 
@@ -19,10 +20,12 @@ export function Footer() {
           <div className="flex flex-col">
             <div className="flex items-center gap-2 mb-4">
               <div className="relative h-8 w-8">
-                <div className="absolute inset-0 rounded-md bg-gradient-to-tr from-blue-600 to-blue-400" />
-                <div className="absolute inset-0 flex items-center justify-center text-xs font-bold text-white">
-                  CASSP
-                </div>
+                <Image
+                  src="/images/cassp-logo.png"
+                  alt="CASSP LAB Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <h2 className="text-xl font-bold">CASSP LAB</h2>
             </div>
@@ -73,18 +76,12 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Contact</h3>
             <address className="not-italic flex flex-col space-y-2 text-sm text-muted-foreground">
+              <p>[42988] 대구광역시 달성군 현풍읍 테크노중앙대로 333 대구경북과학기술원</p>
               <p>Department of Electrical Engineering</p>
-              <p>Building E3, Room 401</p>
-              <p>University Campus</p>
-              <p>City, State 12345</p>
+              <p>Building E3, Room 409</p>
               <p className="pt-2">
-                <a href="mailto:cassp.lab@university.edu" className="hover:text-primary">
-                  cassp.lab@university.edu
-                </a>
-              </p>
-              <p>
-                <a href="tel:+15551234567" className="hover:text-primary">
-                  +1 (555) 123-4567
+                <a href="mailto:gainkim@dgist.ac.kr" className="hover:text-primary">
+                  gainkim@dgist.ac.kr
                 </a>
               </p>
             </address>
