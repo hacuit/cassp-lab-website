@@ -22,7 +22,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <div className="relative h-10 w-10">
             <Image
-              src="/images/new-cassp-logo.png"
+              src="/images/cassp-logo.png"
               alt="CASSP LAB Logo"
               fill
               className="object-contain"
